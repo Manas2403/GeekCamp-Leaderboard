@@ -51,9 +51,7 @@ const $end = document.querySelector("#end");
 const $loader = document.querySelector(".loader");
 async function getData() {
     $loader.classList.remove("hide");
-    let res = await fetch(
-        `https://lnf.iiita.ac.in/geekcamp/get-all-data/`
-    );
+    let res = await fetch(`https://lnf.iiita.ac.in/geekcamp/get-all-data/`);
     let data = await res.json();
     $loader.classList.add("hide");
     return data;
@@ -90,7 +88,7 @@ function addToTable(arr) {
         name = arr[i].username;
         points = arr[i].total_points;
         fullname = arr[i].name;
-        college = arr[i].college;
+        college = arr[i].rollNumber;
         if (lastScore !== points) {
             lastScore = points;
             rank++;
@@ -143,7 +141,7 @@ function addToTable(arr) {
                     <td style = "text-transform:uppercase;">${fullname}</td>
                 </tr>
                 <tr>
-                    <td>COLLEGE</td>
+                    <td>Enrollment No.</td>
                     <td style = "text-transform:uppercase;">${college}</td>
                 </tr>
             </table>
