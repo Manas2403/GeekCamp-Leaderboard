@@ -81,8 +81,7 @@ getData().then((data) => {
     isFetching = true;
     // console.log(data);
     hasNext = data.has_next;
-    addToTable(data.data);
-    timer(data.lastupdated);
+    addToTable(data);
     isFetching = false;
 });
 function addToTable(arr) {
