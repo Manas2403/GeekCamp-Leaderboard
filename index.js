@@ -52,7 +52,7 @@ const $loader = document.querySelector(".loader");
 async function getData() {
     $loader.classList.remove("hide");
     let res = await fetch(
-        `https://apk-month-iiita-23.onrender.com/get-all-data/`
+        `https://lnf.iiita.ac.in/geekcamp/get-all-data/`
     );
     let data = await res.json();
     $loader.classList.add("hide");
